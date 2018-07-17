@@ -2,6 +2,7 @@ node('master') {
           checkout scm
            stage('build') {
               withMaven(jdk: 'Default Java', maven: 'Default Maven') {
+                 echo "Triggering mvn clean install "
                  sh 'mvn clean install'
               }
           } 
