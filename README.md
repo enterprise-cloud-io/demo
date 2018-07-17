@@ -1,2 +1,2 @@
 # Demo Test Jenkins Pipeline builds
-build trigger from commit
+test build trigger from commit
