@@ -1,20 +1,24 @@
 node('master') {
           checkout scm
+          
+          timestamps {
            stage('build') {
               withMaven(jdk: 'Default Java', maven: 'Default Maven') {
-                 echo "Triggering mvn clean install "
                  sh 'mvn clean install'
               }
           } 
-          
-          stage "First echo"
-          echo "Hey, look, I'm echoing with a timestamp!"
+           // Adds timestamps to the output logged by steps inside the wrapper.
+   
+        // Just some echoes to show the timestamps.
+        stage "First echo"
+        echo "Hey, look, I'm echoing with a timestamp!"
 
         // A sleep to make sure we actually get a real difference!
-          stage "Sleeping"
-          sleep 30
+        stage "Sleeping"
+        sleep 30
 
         // And a final echo to show the time when we wrap up.
-          stage "Second echo"
-          echo "Wonder what time it is now?"
+        stage "Second echo"
+        echo "Wonder what time it is now?"
+    }
 }
