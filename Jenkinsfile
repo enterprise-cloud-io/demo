@@ -19,6 +19,6 @@ node('master') {
 
         // And a final echo to show the time when we wrap up.
         stage "Second echo"
-        echo "Wonder what time it is now?"
+        echo "Wonder what time it is now..."
     }
 }
