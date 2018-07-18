@@ -1,2 +1,2 @@
-# Demo Test Jenkins Pipeline builds
+# Demo Jenkins Pipeline
 
